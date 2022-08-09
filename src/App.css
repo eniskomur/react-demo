@@ -1,0 +1,365 @@
+.App{
+  margin: 10px;
+
+}
+
+
+.nav-menu{
+
+  display: flex;
+  border-bottom: 1px solid white;
+}
+
+.nav-menu h3{
+  margin: 10px;
+  font-size: 24px;
+}
+
+.nav2{
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between
+}
+.nav2 input{
+   border-radius: 20px;
+   border: 0px;
+   padding: 5px;
+   padding-left: 15px;
+}
+
+.nav2 div{
+  display: flex;
+}
+.nav2 div p{
+ margin: 5px;
+}
+.mycard{
+  flex-basis: 350px;
+  margin: 10px;
+  width: 350px;
+  height: 525px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 5px 5px 20px black;
+}
+.mycard:hover{
+  cursor: pointer;
+}
+
+
+
+
+.mycard:hover .intro{
+  height: 240px;
+  bottom: 0px;
+  background: black;
+  opacity: .8;
+  transition: .5s;
+}
+
+.mycard:hover p{
+   opacity: 1;
+   visibility: visible;
+}
+
+.mycard:hover button{
+  opacity: 1;
+  visibility: visible;
+}
+
+.mycard:hover img{
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.mycard-img{
+  width: 350px;
+  height: 525px;
+  border-radius: 10px;
+  z-index: -2;
+  max-width: 100%;
+  transition: .5s;
+}
+
+
+.mycards{
+  margin-top: 50px;
+}
+
+.intro{
+  position: absolute;
+  background: rgb(27, 27, 27,.5);
+  bottom: 0;
+  width: 350px;
+  height: 70px;
+  color: white;
+  padding: 10px;
+  transition: .5s;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.intro h3{
+  overflow: hidden; /* taşanları gizle */
+  white-space: nowrap; /* alt satıra hiç inme */
+  text-overflow: ellipsis;
+}
+.intro p{
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* kaç satırla sınırlayacağımızı yazıyoruz */
+  -webkit-box-orient: vertical;
+}
+
+.mycard-imdb{
+  position: absolute;
+  background: rgb(12, 118, 137);
+  top: 0;
+  width: 50px;
+  height: 50px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.mycard-favorite{
+  position: absolute;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  right: 10px;
+  font-size: 50px;
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: .2s;
+  border-radius: 50%;
+}
+.mycard-favorite:hover{
+
+  content: url("img/remove-red.png");
+  font-weight: bold;
+ 
+}
+
+.mycard-favorite2{
+  position: absolute;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  right: 10px;
+  font-size: 50px;
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: .2s;
+  border-radius: 50%;
+}
+.mycard-favorite2:hover{
+
+  content: url("img/plus-green.png");
+  font-weight: bold;
+ 
+}
+
+
+.intro div{
+  display: flex;
+  position: relative;
+}
+.intro div h1{
+  position: absolute;
+  right: -10px;
+  bottom: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  opacity: .8;
+  font-size: 60px;
+}
+
+.myBtn{
+  padding: 10px;
+  width: 50%;
+  border: 0;
+  border-radius: 10px;
+  background-color: #2196F3;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.myBtn-hide{
+visibility: hidden;
+}
+
+.favorite-div{
+  display: flex;
+
+}
+.favorite-div button{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: 0;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+
+.cards-row{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+
+  
+}
+.link-style{
+  color: white;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.link-style:hover{
+  color: rgb(12, 118, 137);
+ 
+ 
+}
+/* detail */
+
+.detail-img{
+  width: 350px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+@media(max-width:768px){
+  .detail-img{
+    width: 300px;
+
+  }
+}
+
+.detail-img:hover{
+  transform: scale(1.1) ;
+  cursor: pointer;
+
+}
+
+
+.detail-row{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #2d3136;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px black;
+  
+}
+.detail-col{
+  margin: 50px;
+  flex-basis: 20%;
+}
+.detail-col2{
+  padding-top: 50px;
+  margin: 50px;
+  flex-basis: 50%;
+  font-size: 1em;
+}
+
+
+.empty{
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
